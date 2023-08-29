@@ -37,6 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var qr_code_svg_1 = require("./assets/qr-code.svg");
+var close_outline_svg_1 = require("./assets/close-outline.svg");
 require("./App.css");
 var react_1 = require("react");
 var firebase_config_ts_1 = require("./firebase/firebase-config.ts");
@@ -94,6 +95,7 @@ function App() {
     return (React.createElement(React.Fragment, null,
         React.createElement("div", { className: isOpen === true ? 'pageHasOverlay' : 'pageWithoutOverlay' },
             isOpen === true && modalType === 'delete' ? (React.createElement("div", { className: 'modalOverlay' },
+                React.createElement("img", { onClick: function () { return setIsOpen(false); }, src: close_outline_svg_1["default"], className: 'close' }),
                 React.createElement("h2", null, "Delete acount forever?"),
                 React.createElement("p", null, "confirm your email and password. After account has been delete all data will be lost."),
                 React.createElement("div", { className: 'form' },
@@ -107,7 +109,7 @@ function App() {
                     React.createElement("p", null,
                         React.createElement("span", null, "Cheers to discovering the art of cocktails, one recipe at a time!"))),
                 React.createElement("div", { className: isOpen === true ? 'links' + ' linkBlur' : 'links' },
-                    React.createElement("img", { src: qr_code_svg_1["default"], className: 'logo', alt: 'Vite logo' }))),
+                    React.createElement("img", { src: qr_code_svg_1["default"], className: 'logo' }))),
             React.createElement("div", { className: isOpen === true ? 'footerBlur' + ' footer' : 'footer' },
                 React.createElement("p", { className: 'read-the-docs' },
                     React.createElement("button", null,

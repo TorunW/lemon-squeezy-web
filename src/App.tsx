@@ -1,4 +1,5 @@
 import qrCode from './assets/qr-code.svg';
+import closeOutline from './assets/close-outline.svg';
 import './App.css';
 import { useState } from 'react';
 import { auth, db } from './firebase/firebase-config.ts';
@@ -53,6 +54,11 @@ function App() {
       >
         {isOpen === true && modalType === 'delete' ? (
           <div className='modalOverlay'>
+            <img
+              onClick={() => setIsOpen(false)}
+              src={closeOutline}
+              className='close'
+            />
             <h2>Delete acount forever?</h2>
             <p>
               confirm your email and password. After account has been delete all
@@ -101,7 +107,7 @@ function App() {
             </p>
           </div>
           <div className={isOpen === true ? 'links' + ' linkBlur' : 'links'}>
-            <img src={qrCode} className='logo' alt='Vite logo' />
+            <img src={qrCode} className='logo' />
           </div>
         </div>
         <div className={isOpen === true ? 'footerBlur' + ' footer' : 'footer'}>

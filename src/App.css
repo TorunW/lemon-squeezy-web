@@ -68,6 +68,16 @@ span {
   left: 50%;
   transform: translate(-50%);
 }
+.close {
+  position: absolute;
+  height: 30px;
+  right: 2em;
+}
+
+.close:hover {
+  cursor: pointer;
+  filter: brightness(96%);
+}
 
 input {
   border: rgb(247, 170, 176);
