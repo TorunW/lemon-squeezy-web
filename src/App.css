@@ -1,18 +1,36 @@
 #root {
   width: 100%;
-  height: 90vh;
-  margin: 0 auto;
+  height: 80vh;
   padding: 2rem;
 }
+
 .page {
-  margin: 0;
+  justify-content: space-between;
   display: flex;
+}
+.page,
+.pageWithoutOverlay {
+  margin: 0;
   width: 100%;
   height: 100%;
-  justify-content: space-between;
+}
+
+.cardBlur,
+.linkBlur,
+.footerBlur {
+  filter: blur(2px);
+}
+.pageHasOverlay {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .card {
   max-width: 70%;
+  padding: 2em;
 }
 
 p {
@@ -27,7 +45,6 @@ span {
 .links {
   display: flex;
   align-items: flex-end;
-  background-color: antiquewhite;
   width: 30%;
 }
 .logo {
@@ -40,10 +57,82 @@ span {
   filter: drop-shadow(0 0 2em #00000043);
 }
 
-.card {
-  padding: 2em;
+.read-the-docs {
+  color: #2e2e2e;
+  display: flex;
+  justify-content: center;
+  font-family: 'Outfit';
+  gap: 16px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
 }
 
-.read-the-docs {
-  color: #888;
+input {
+  border: rgb(247, 170, 176);
+  border-radius: 50px;
+  border-style: solid;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Outfit';
+  width: 250px;
+}
+
+button,
+a {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: 'Outfit';
+  font-size: 16px;
+  text-decoration: none;
+  color: #2e2e2e;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.submit {
+  background-color: transparent;
+  text-transform: capitalize;
+  border: rgb(247, 170, 176);
+  border-radius: 50px;
+  border-style: solid;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 0.4rem;
+  width: 260px;
+  margin-top: 1rem;
+}
+
+.submit:hover {
+  background-color: rgb(247, 170, 176);
+  text-decoration: none;
+}
+
+button:hover,
+a:hover {
+  text-decoration: underline;
+}
+
+.modalOverlay {
+  height: 50%;
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  border: rgba(249, 179, 185);
+  border-radius: 50px;
+  border-style: solid;
+  padding: 2em;
+  background-color: rgba(249, 179, 185, 0.6);
+  margin: 2em;
+  color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
